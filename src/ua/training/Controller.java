@@ -150,7 +150,8 @@ class InputLogin extends Input {
             model.setLogin(userInput);
         } catch (IncorrectInputException e) {
             view.printLoginAlreadyExistsMessage();
-            view.printLoginEntered(userInput);
+            view.printLoginEntered();
+            view.printMessage(e.getUserInput());
             new InputLogin().processUserInput(model, view, new Scanner(System.in));
         }
     }
@@ -253,7 +254,8 @@ class InputEmail extends Input {
             model.setEmail(userInput);
         } catch (IncorrectInputException e) {
             view.printEmailAlreadyExistsMessage();
-            view.printEmailEntered(userInput);
+            view.printEmailEntered();
+            view.printMessage(e.getUserInput());
             new InputEmail().processUserInput(model, view, new Scanner(System.in));
         }
     }

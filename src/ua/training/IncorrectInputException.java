@@ -9,7 +9,13 @@ package ua.training;
 
 class IncorrectInputException extends Exception {
 
-    IncorrectInputException(String userInput) {
+    String userInput;
 
+    IncorrectInputException(String userInput) {
+        this.userInput = userInput;
+    }
+
+    String getUserInput() {
+        return userInput;
     }
 }

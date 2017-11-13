@@ -16,7 +16,7 @@ class View {
      * @param message current message to print
      */
 
-    private void printMessage(String message) {
+    void printMessage(String message) {
         System.out.println(message);
     }
 
@@ -38,11 +38,10 @@ class View {
 
     /**
      * Prints "Login you entered" message.
-     * @param login Current login, entered by user
      */
 
-    void printLoginEntered(String login) {
-        printMessage(messagesBundle.getString(OUTPUT_LOGIN_YOU_ENTERED) + login);
+    void printLoginEntered() {
+        printMessage(messagesBundle.getString(OUTPUT_LOGIN_YOU_ENTERED));
     }
 
     /**
@@ -71,11 +70,10 @@ class View {
 
     /**
      * Prints "E-mail you entered" message.
-     * @param email Current E-mail, entered by user
      */
 
-    void printEmailEntered(String email) {
-        printMessage(messagesBundle.getString(OUTPUT_EMAIL_YOU_ENTERED) + email);
+    void printEmailEntered() {
+        printMessage(messagesBundle.getString(OUTPUT_EMAIL_YOU_ENTERED));
     }
 
     /**
